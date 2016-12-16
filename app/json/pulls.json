@@ -1,39 +1,54 @@
 [
-  {
-    "id": "TPMN-1046",
-    "pr": {
-      "prNumber": 25703,
-      "prTitle": "TPMN-1046 IBM: update logo text font-size to 20px",
-      "prUrl": "https://github.com/AppDirect/AppDirect/pull/25703",
-      "prLabels": [
-        "Frontend",
-        "Needs Deviation Request",
-        "QA Validated",
-        "RC",
-        "Team - TPMFE"
-      ],
-      "prMergedAt": null,
-      "releaseBranchMergedTo": 601,
-      "screencastLink": null,
-      "screenShotLinks": [
-        "https://cloud.githubusercontent.com/assets/4163171",
-        "https://cloud.githubusercontent.com/assets/14081976"
-      ],
-      "testRailLinks": null,
-      "addToReleaseNotes": false
-    },
-    "jiraTicket": {
-      "jiraId": "TPMN-1046",
-      "jiraUrl": "https://appdirect.jira.com/browse/TPMN-1046",
-      "jiraSummary": "Update IBM marketplace header theme.",
-      "issueType": "Story",
-      "isBlocker": false
-    },
-    "team": "TPMN",
-    "developer": "perry-wong",
-    "qa": null,
-    "pm": null,
-    "notes": null
+  {"id" : 25102,
+     "pr" :
+        {
+           "prNumber" : 25102,
+           "prTitle" : "Pay unpaid invoice from the Invoice Detail for a BAAS marketplace / C…",
+           "prUrl" : "https://github.com/AppDirect/AppDirect/pull/25102",
+           "prLabels" :
+              [
+                 "QA Validated",
+                 "Team - DS",
+                 "UI Approved",
+                 "Verified To Merge"
+              ],
+           "prMergedAt" : "2016-11-29T14:02:13Z",
+           "releaseBranchMergedTo" : 270,
+           "screencastLink" : null,
+           "screenShotLinks" :
+              [
+                 "https://cloud.githubusercontent.com/assets/9853777",
+                 "https://cloud.githubusercontent.com/assets/9853777",
+                 "https://cloud.githubusercontent.com/assets/4741410",
+                 "https://cloud.githubusercontent.com/assets/4741410",
+                 "https://cloud.githubusercontent.com/assets/11875843",
+                 "https://cloud.githubusercontent.com/assets/11875843",
+                 "https://cloud.githubusercontent.com/assets/11875843",
+                 "https://cloud.githubusercontent.com/assets/9853777",
+                 "https://cloud.githubusercontent.com/assets/9853777",
+                 "https://cloud.githubusercontent.com/assets/11875843"
+              ],
+           "testRailLinks" :
+              [
+                 "https://appdirect.testrail.com/index.php?/cases/view/19877649",
+                 "https://appdirect.testrail.com/index.php?/cases/view/19877650",
+                 "https://appdirect.testrail.com/index.php?/cases/view/19879838"
+              ],
+           "addToReleaseNotes" : false
+        },
+     "jiraTicket" :
+        {
+           "jiraId" : "DS-11050",
+           "jiraUrl" : "https://appdirect.jira.com/browse/DS-11050",
+           "jiraSummary" : "Order Product: Pay unpaid invoice from the Invoice Detail for a BAAS marketplace / Channel Admin User",
+           "issueType" : "Story",
+           "isBlocker" : false
+        },
+     "team" : "DS",
+     "developer" : "marc-andre-beaudry",
+     "qa" : null,
+     "pm" : null,
+     "notes" : null
   },
   {
     "id": "DS-9879",

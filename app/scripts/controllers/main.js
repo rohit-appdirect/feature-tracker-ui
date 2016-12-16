@@ -17,8 +17,14 @@ angular.module('featureTrackerUiApp')
                        '  <a target="_blank" href="{{row.entity.pr.prUrl}}">{{row.entity.pr.prNumber}}</a>' +
                        '</div>'
 
-    var labelCellTemplate = '<div ng-repeat="label in row.entity.pr.prLabels">' +
-                       '<span>{{label}}</span>' +
+    var testrailLinkCellTemplate = '<div>' +
+                       '  <a target="_blank" href="{{row.entity.pr.testRailLinks}}">{{row.entity.pr.prNumber}}</a>' +
+                       '</div>'
+    var testrailLinkCellTemplate = '<div ng-repeat="link in row.entity.pr.testRailLinks" >' +
+                       '<a target="_blank" href="{{link}}">link {{$index + 1}}</a>' +
+                       '</div>'
+    var labelCellTemplate = '<div ng-repeat="label in row.entity.pr.prLabels" >' +
+                       '<span class="label-text label-green">{{label}}</span>' +
                        '</div>'
     //Column defination for grid
     $scope.gridOptions = {
@@ -34,7 +40,7 @@ angular.module('featureTrackerUiApp')
             { field: 'developer', name: 'dev', minWidth: 120, width: 120, enableColumnResizing: true },
             { field: 'pr.screencastLink', name: 'DEMO', minWidth: 80, width: 80, enableColumnResizing: true },
             { field: 'pm', name: 'pm', minWidth: 120, width: 120, enableColumnResizing: true},
-            { field: 'pr.testRailLinks', name: 'testrail', minWidth: 120, width: 120, enableColumnResizing: true},
+            { field: 'pr.testRailLinks', name: 'testrail', minWidth: 120, width: 120, enableColumnResizing: true, cellTemplate: testrailLinkCellTemplate},
             { field: 'notes', name: 'notes', minWidth: 150, width: 150, enableColumnResizing: true},
             { field: 'pr.addToReleaseNotes', name: 'added_release', minWidth: 120, width: 120, enableColumnResizing: true}
         ]
