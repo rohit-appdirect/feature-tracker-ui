@@ -10,21 +10,21 @@
 angular.module('featureTrackerUiApp')
   .controller('MainCtrl', function ($scope, $filter, dataService) {
 
-    var jiraTicketLinkCellTemplate = '<div>' +
+    var jiraTicketLinkCellTemplate = '<div class="ui-grid-cell-contents">' +
                        '  <a target="_blank" href="{{row.entity.jiraTicket.jiraUrl}}">{{row.entity.jiraTicket.jiraId}}</a>' +
                        '</div>'
-    var prLinkCellTemplate = '<div>' +
+    var prLinkCellTemplate = '<div class="ui-grid-cell-contents">' +
                        '  <a target="_blank" href="{{row.entity.pr.prUrl}}">{{row.entity.pr.prNumber}}</a>' +
                        '</div>'
 
-    var testrailLinkCellTemplate = '<div>' +
+    var testrailLinkCellTemplate = '<div class="ui-grid-cell-contents">' +
                        '  <a target="_blank" href="{{row.entity.pr.testRailLinks}}">{{row.entity.pr.prNumber}}</a>' +
                        '</div>'
-    var testrailLinkCellTemplate = '<div ng-repeat="link in row.entity.pr.testRailLinks" >' +
+    var testrailLinkCellTemplate = '<div class="ui-grid-cell-contents" ng-repeat="link in row.entity.pr.testRailLinks" >' +
                        '<a target="_blank" href="{{link}}">link {{$index + 1}}</a>' +
                        '</div>'
-    var labelCellTemplate = '<div ng-repeat="label in row.entity.pr.prLabels" >' +
-                       '<span class="label-text label-green">{{label}}</span>' +
+    var labelCellTemplate = '<div class="text-center" ng-repeat="label in row.entity.pr.prLabels" >' +
+                       '<span class="label-text" ng-class="{\'QA Validated\':\'label-Q-V\', \'Needs QA Validation\':\'label-N-Q-V\', \'Verified to Merge\':\'label-V-T-M\', \'PM Approved\':\'label-P-M-A\', \'Needs PM Approval\': \'label-N-P-A\'}[label]">{{label}}</span>' +
                        '</div>'
     //Column defination for grid
     $scope.gridOptions = {

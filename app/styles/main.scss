@@ -123,20 +123,31 @@ input {
   align-content: stretch;
 }
 
-.label-text {
-  color: white;
+.text-center {
+  text-align: center;
 }
 
-.label-green{
+.label-text {
+  color: white;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+.label-Q-V {
   background-color: #009800;
 }
-.label-yellow{
+.label-N-Q-V {
+  background-color: #fbca04;
+}
+.label-V-T-M {
   background-color: #009800;
 }
-.label-blue{
+.label-P-M-A {
   background-color: #009800;
 }
-.label-red{
-  background-color: #009800;
+.label-N-P-A {
+  background-color: #fbca04;
 }
+
+
 
