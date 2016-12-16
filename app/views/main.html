@@ -1,19 +1,30 @@
 <div class="col-sm-12">
     <div class="col-md-12 filterContainer pad-left-right-0">
-        <div class="col-md-2 pad-left-right-0">
-          <span class="col-sm-12 pad-left-right-0">Milestone</span>
-          <input type="text" name="" class="col-sm-12">
+        <div class="pull-right">
+          <span class="col-xs-12 pad-left-right-0">Last updated: </span>
         </div>
-        <div class="col-md-2">
-          <span class="col-sm-12 pad-left-right-0">State</span>
-          <input type="text" name="" class="col-sm-12">
+        <div class="col-xs-12 col-sm-12 col-md-2 pad-left-right-0">
+          <span class="col-xs-6 col-sm-12 col-md-6 pad-left-right-0">Global search</span>
+          <input type="text" name="" class="col-xs-6 col-sm-12" ng-model="globalText" ng-change="handleGlobalChanged()" placeholder="Search global...">
         </div>
-        <div class="col-md-2">
-          <span class="col-sm-12 pad-left-right-0">Team</span>
-          <input type="text" name="" class="col-sm-12">
+        <!-- <div class="col-sm-4 col-md-2 pad-left-right-0">
+          <span class="col-xs-6 col-sm-12 pad-left-right-0">Milestone</span>
+          <input type="text" name="" class="col-xs-6 col-sm-12 pad-left-right-0" ng-model="milestoneText" ng-change="handleMilestoneChanged()" placeholder="Search...">
         </div>
+        <div class="col-sm-4 col-md-2 pad-left-right-0">
+          <span class="col-xs-6 col-sm-12 pad-left-right-0">Status</span>
+          <input type="text" name="" class="col-xs-6 col-sm-12 pad-left-right-0" ng-model="statusText" ng-change="handleStatusChanged()" placeholder="Search status...">
+        </div>
+        <div class="col-sm-4 col-md-2 pad-left-right-0">
+          <span class="col-xs-6 col-sm-12 pad-left-right-0">Team</span>
+          <input type="text" name="" class="col-xs-6 col-sm-12 pad-left-right-0" ng-model="teamText" ng-change="handleTeamChanged()" placeholder="Search team...">
+        </div>
+        <div class="col-sm-4 col-md-2 pad-left-right-0">
+            <span class="col-xs-6 col-sm-6 pad-left-right-0">Reset filters</span>
+            <button class="btn-primary" ng-click="resetFilters()">Reset</button>
+        </div>  -->   
     </div>
-    <div class="cold-md-12">
-        <div id="grid1" ui-grid="gridOptions" class="grid col-sm-12"></div>
+    <div class="col-md-12">
+        <div id="grid1" ui-grid="gridOptions" class="grid col-sm-12 pad-left-right-0" ui-grid-resize-columns ui-grid-move-columns></div>
     </div>
 </div>
