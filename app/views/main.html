@@ -1,30 +1,31 @@
 <div class="col-sm-12">
-    <div class="col-md-12 filterContainer pad-left-right-0">
-        <div class="pull-right">
-          <span class="col-xs-12 pad-left-right-0">Last updated: </span>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-2 pad-left-right-0">
-          <span class="col-xs-6 col-sm-12 col-md-6 pad-left-right-0">Global search</span>
-          <input type="text" name="" class="col-xs-6 col-sm-12" ng-model="globalText" ng-change="handleGlobalChanged()" placeholder="Search global...">
-        </div>
-        <!-- <div class="col-sm-4 col-md-2 pad-left-right-0">
-          <span class="col-xs-6 col-sm-12 pad-left-right-0">Milestone</span>
-          <input type="text" name="" class="col-xs-6 col-sm-12 pad-left-right-0" ng-model="milestoneText" ng-change="handleMilestoneChanged()" placeholder="Search...">
-        </div>
-        <div class="col-sm-4 col-md-2 pad-left-right-0">
-          <span class="col-xs-6 col-sm-12 pad-left-right-0">Status</span>
-          <input type="text" name="" class="col-xs-6 col-sm-12 pad-left-right-0" ng-model="statusText" ng-change="handleStatusChanged()" placeholder="Search status...">
-        </div>
-        <div class="col-sm-4 col-md-2 pad-left-right-0">
-          <span class="col-xs-6 col-sm-12 pad-left-right-0">Team</span>
-          <input type="text" name="" class="col-xs-6 col-sm-12 pad-left-right-0" ng-model="teamText" ng-change="handleTeamChanged()" placeholder="Search team...">
-        </div>
-        <div class="col-sm-4 col-md-2 pad-left-right-0">
-            <span class="col-xs-6 col-sm-6 pad-left-right-0">Reset filters</span>
-            <button class="btn-primary" ng-click="resetFilters()">Reset</button>
-        </div>  -->   
-    </div>
+    
     <div class="col-md-12">
+        <div class="col-md-12 filterContainer">
+            <!-- <div class="pull-right">
+              <span class="col-xs-12 pad-left-right-0">Last updated: </span>
+            </div> -->
+            <div class="col-xs-12 col-sm-9 col-md-9 pad-left-right-0">
+              <button ng-click="displayFilter = !displayFilter">Filters</button>
+            </div> 
+            <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
+              <input type="text" name="" class="col-xs-6 col-sm-12" ng-model="globalText" ng-change="handleGlobalChanged()" placeholder="Search">
+            </div> 
+        </div>
+         <div class="col-md-12 filterContainer" ng-show="displayFilter">
+            <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
+                <span>Milestone</span>
+                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="milestoneText" placeholder="Search" ng-change="handleMilestoneChanged(milestoneText)">
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
+                <span>Labels</span>
+                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="statusText" ng-change="handleStatusChanged(statusText)" placeholder="Search">
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
+                <span>Team</span>
+                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="teamText" ng-change="handleTeamChanged(teamText)" placeholder="Search">
+            </div> 
+        </div>
         <div id="grid1" ui-grid="gridOptions" class="grid col-sm-12 pad-left-right-0" ui-grid-resize-columns ui-grid-move-columns></div>
     </div>
 </div>

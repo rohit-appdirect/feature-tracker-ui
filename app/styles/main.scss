@@ -97,11 +97,14 @@ body {
 }
 
 .filterContainer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ccc;
 }
 
 input {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+
+.ui-grid-filter-container { display: none!important; }
