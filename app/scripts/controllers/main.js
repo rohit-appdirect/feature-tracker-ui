@@ -16,16 +16,20 @@ angular.module('featureTrackerUiApp')
     var prLinkCellTemplate = '<div>' +
                        '  <a target="_blank" href="{{row.entity.pr.prUrl}}">{{row.entity.pr.prNumber}}</a>' +
                        '</div>'
+
+    var labelCellTemplate = '<div ng-repeat="label in row.entity.pr.prLabels">' +
+                       '<span>{{label}}</span>' +
+                       '</div>'
     //Column defination for grid
     $scope.gridOptions = {
         enableColumnResizing: true,
         enableFiltering: true,
         columnDefs: [
-            { field: 'pr.releaseBranchMergedTo', name: 'milestone', minWidth: 100, width: 100, enableColumnResizing: true},
+            { field: 'pr.releaseBranchMergedTo', name: 'no', minWidth: 50, width: 50, enableColumnResizing: true},
             { field: 'jiraTicket.jiraId', name: 'jira_ticket', minWidth: 110, width: 110, enableColumnResizing: true, cellTemplate: jiraTicketLinkCellTemplate},
-            { field: 'jiraTicket.jiraSummary', name: 'feature', minWidth: 150, width: 150, enableColumnResizing: true},
+            { field: 'jiraTicket.jiraSummary', name: 'feature', minWidth: 250, width: 250, enableColumnResizing: true},
             { field: 'pr.prNumber', name: 'pr_number', minWidth: 90, width: 90, enableColumnResizing: true, cellTemplate: prLinkCellTemplate },
-            { field: 'pr.prLabels', name:'labels', minWidth: 150, width: 150, enableColumnResizing: true},
+            { field: 'pr.prLabels', name:'labels', minWidth: 150, width: 150, enableColumnResizing: true, cellTemplate: labelCellTemplate},
             { field: 'team', name: "team" , minWidth: 80, width: 80, enableColumnResizing: true},
             { field: 'developer', name: 'dev', minWidth: 120, width: 120, enableColumnResizing: true },
             { field: 'pr.screencastLink', name: 'DEMO', minWidth: 80, width: 80, enableColumnResizing: true },
