@@ -15,15 +15,15 @@
          <div class="col-md-12 filterContainer" ng-show="displayFilter">
             <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
                 <span>Milestone</span>
-                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="milestoneText" placeholder="Search" ng-change="handleMilestoneChanged(milestoneText)">
+                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="milestoneText" ng-change="handleMilestoneChanged(milestoneText)">
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
                 <span>Labels</span>
-                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="statusText" ng-change="handleStatusChanged(statusText)" placeholder="Search">
+                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="labelText" ng-change="handleLabelChanged(labelText)">
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 pad-left-right-0">
                 <span>Team</span>
-                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="teamText" ng-change="handleTeamChanged(teamText)" placeholder="Search">
+                <input type="text" name="" class="col-xs-12 col-sm-12" ng-model="teamText" ng-change="handleTeamChanged(teamText)">
             </div> 
         </div>
         <div id="grid1" ui-grid="gridOptions" class="grid col-sm-12 pad-left-right-0" ui-grid-resize-columns ui-grid-move-columns></div>

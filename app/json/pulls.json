@@ -13,7 +13,7 @@
         "Team - TPMFE"
       ],
       "prMergedAt": null,
-      "releaseBranchMergedTo": null,
+      "releaseBranchMergedTo": 601,
       "screencastLink": null,
       "screenShotLinks": [
         "https://cloud.githubusercontent.com/assets/4163171",
@@ -45,7 +45,7 @@
         "Team - DS"
       ],
       "prMergedAt": null,
-      "releaseBranchMergedTo": null,
+      "releaseBranchMergedTo": 602,
       "screencastLink": null,
       "screenShotLinks": null,
       "testRailLinks": null,
